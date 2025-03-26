@@ -22,7 +22,7 @@ const experiences: Experience[] = [
     title: "Web Developer",
     company: "More Ideas General Trading LLC – BYJU'S",
     location: "Dubai, UAE",
-    period: "JULY 2022 – PRESENT",
+    period: "July 2022 – Present",
     highlights: [
       "Developed robust and scalable web applications using Laravel, Laravel Inertia, React, and Tailwind CSS",
       "Managed over 500,000+ customer records using multiple CRM API integrations",
@@ -37,7 +37,7 @@ const experiences: Experience[] = [
     title: "PHP Web Developer",
     company: "HMMBiz Web Solutions",
     location: "Ahmedabad, India",
-    period: "APRIL 2018 – JUNE 2022",
+    period: "April 2018 – June 2022",
     highlights: [
       "Led a development team delivering full-stack web solutions using PHP, Laravel, CodeIgniter, and JavaScript",
       "Built database-driven web applications and developed dynamic frontend interfaces with Bootstrap and jQuery",
@@ -51,7 +51,7 @@ const experiences: Experience[] = [
     title: "PHP Developer Intern",
     company: "HMMBiz Web Solutions",
     location: "Ahmedabad, India",
-    period: "OCTOBER 2017 – MARCH 2018",
+    period: "October 2017 – March 2018",
     highlights: [
       "Created and maintained the visual aspects of websites, including layout, design, and interactivity",
       "Ensured websites and applications work seamlessly across various devices and screen sizes",
