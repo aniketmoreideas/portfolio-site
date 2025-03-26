@@ -33,7 +33,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text"
+            className="text-5xl md:text-7xl font-bold mb-6 leading-tight md:leading-tight bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text"
           >
             Crafting Digital Experiences
           </motion.h1>
