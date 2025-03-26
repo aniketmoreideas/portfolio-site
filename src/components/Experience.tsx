@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { HiOutlineBriefcase } from 'react-icons/hi';
 
 interface Experience {
   title: string;
@@ -72,33 +73,32 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+      className="group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
     >
-      <div className="p-8">
-        {/* Header with gradient border */}
-        <div className="border-b border-gray-100 pb-6">
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900">{experience.title}</h3>
-              <p className="text-lg font-semibold text-blue-600 mt-1">
-                {experience.company}
-              </p>
-            </div>
-            <div className="flex flex-col items-start md:items-end">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 font-medium">
-                {experience.period}
-              </span>
-              <p className="text-gray-600 mt-2">{experience.location}</p>
-            </div>
+      <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-600 to-purple-600 transform origin-left group-hover:scale-y-110 transition-transform duration-300"></div>
+      
+      <div className="p-8 pl-12">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+          <div>
+            <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+              {experience.title}
+            </h3>
+            <p className="text-lg font-semibold text-gray-700 mt-1">
+              {experience.company}
+            </p>
+            <p className="text-gray-600 mt-1">{experience.location}</p>
+          </div>
+          <div className="flex items-center bg-blue-50 px-4 py-2 rounded-full text-blue-700 font-medium text-sm">
+            <HiOutlineBriefcase className="mr-2" />
+            {experience.period}
           </div>
         </div>
 
-        {/* Highlights */}
-        <ul className="mt-6 space-y-4">
+        <ul className="space-y-3">
           {experience.highlights.map((highlight, i) => (
-            <li key={i} className="flex items-start space-x-3 group">
-              <span className="w-2 h-2 rounded-full bg-blue-600 mt-2.5 flex-shrink-0 group-hover:bg-blue-700 transition-colors"></span>
-              <span className="text-gray-600 group-hover:text-gray-900 transition-colors">
+            <li key={i} className="flex items-start space-x-3 group/item">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 flex-shrink-0 group-hover/item:bg-blue-700 transition-colors"></span>
+              <span className="text-gray-600 group-hover/item:text-gray-900 transition-colors">
                 {highlight}
               </span>
             </li>
@@ -113,7 +113,6 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -131,8 +130,7 @@ const Experience = () => {
           </p>
         </motion.div>
 
-        {/* Experience Cards */}
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-6 max-w-4xl mx-auto">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} index={index} />
           ))}
