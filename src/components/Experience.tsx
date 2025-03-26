@@ -51,7 +51,7 @@ const experiences: Experience[] = [
     title: "PHP Developer Intern",
     company: "HMMBiz Web Solutions",
     location: "Ahmedabad, India",
-    period: "JANUARY 2018 – MARCH 2018",
+    period: "OCTOBER 2017 – MARCH 2018",
     highlights: [
       "Created and maintained the visual aspects of websites, including layout, design, and interactivity",
       "Ensured websites and applications work seamlessly across various devices and screen sizes",
