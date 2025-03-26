@@ -30,7 +30,7 @@ const projects: Project[] = [
     description: "Developed a scalable CRM system handling 500,000+ customer records with features like lead management, sales tracking, and automated reporting. Integrated multiple third-party APIs and payment gateways.",
     image: "/projects/crm.jpg",
     technologies: ["Laravel", "MySQL", "React", "Redis", "AWS"],
-    githubUrl: "https://github.com/yourusername/crm-system"
+    githubUrl: "https://github.com/aniketsharma4u/crm-system"
   },
   {
     title: "E-commerce Analytics Dashboard",
